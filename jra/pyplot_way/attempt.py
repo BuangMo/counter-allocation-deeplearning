@@ -106,7 +106,7 @@ class Mathematics():
         Ry_pitch = np.array(Ry_pitch)
         Rx_gamma = np.array(Rx_gamma)
         
-        rot_matrix_product = np.dot(Rz_heading, Ry_pitch, Rx_gamma)
+        rot_matrix_product = np.matmul(Rz_heading, Ry_pitch, Rx_gamma)
         
         print("\n\n\n")
         print(Rz_heading)
@@ -115,7 +115,7 @@ class Mathematics():
         print()
         print(Rx_gamma)
         print()
-        print(np.dot(Rz_heading, Ry_pitch, Rx_gamma))
+        print(np.matmul(Rz_heading, Ry_pitch, Rx_gamma))
         
         return rot_matrix_product
     
@@ -191,10 +191,10 @@ def main():
     print("\n\n\n")
     
     #for i in range(20):
-    platform_current_pos = obj.getPositionNow()
-    print(platform_current_pos)
+    #platform_current_pos = obj.getPositionNow()
+    #print(platform_current_pos)
     #print()
-    obj.calculateRelativeCoord(platform_current_pos)
+    #obj.calculateRelativeCoord(platform_current_pos)
         
     #plotScene()
 
